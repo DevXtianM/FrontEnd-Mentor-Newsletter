@@ -28,7 +28,7 @@ Users should be able to:
 - See hover and focus states for all interactive elements on the page
 
 ### Links
-- Live Site URL: (https://devxtianm.github.io/Blog-Preview-Card/)
+- Live Site URL: [(https://devxtianm.github.io/Blog-Preview-Card/)](https://devxtianm.github.io/FrontEnd-Mentor-Newsletter/index.html)
 
 ## My process
 
