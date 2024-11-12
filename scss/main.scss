@@ -1,0 +1,581 @@
+@import './globals/color', "./globals/resets";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body{
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+    background-color: $Charcoal-Grey;
+}
+
+main{
+    height: 100vh;
+    display: grid;
+    
+    place-items: center;
+    margin: 1rem;
+
+    &.success-card-container{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        margin: 1rem;
+    }
+}
+
+article{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    background-color: $White;
+    border-radius: 35px;
+
+    .card-form{
+        grid-area: 1 / 1 / 2 / 2; 
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        color: $Dark-Slate-Grey;
+        margin: 60px;
+        width: 382px;
+
+        h1{
+            font-size: 3.475rem;
+            margin-bottom: 1rem;
+        }
+
+        p{
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        ul{
+            list-style-type: none;
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: .5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+
+
+            li{
+                
+                &:before{
+                    content: '';
+                    position: absolute;
+                    margin-left: -30px;
+                    width: 2em;
+                    height: 2em;
+                    background-repeat: no-repeat;
+                    background-image: url('data:image/svg+xml,<svg transform="scale(1) translate(0, 0)" transform-origin="center" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="%23FF6155"/><path stroke="%23FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>');
+                }
+            }
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+
+            label{
+                margin-top: 1.25rem;
+                font-size: .725rem;
+                font-weight: 700;
+                    
+                &.invalid-label{
+                    display: none;
+                    color: $Tomato;
+                    position: absolute;
+                    transform: translate(275px, 1px);
+
+                }
+            }
+
+            input[type="email"]{
+                height: 50px;
+                border-radius: 8px;
+                border: 1px solid $Grey;
+                opacity: .75;
+                margin: .25rem 0;
+                text-indent: 1rem;
+                color: $Dark-Slate-Grey;
+                font-weight: 400;
+
+                &::placeholder{
+                    text-indent: 1rem;
+                }
+
+                &.invalid-email {
+                    border-color: $Tomato;
+                    color: $Tomato;
+                    background-color: #ffe6e6;
+                }
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+            }
+
+            button{
+                height: 50px;
+                margin-top: 1rem;
+                border-radius: 8px;
+                border: 1.5px solid $Dark-Slate-Grey;
+                background-color: $Dark-Slate-Grey;
+                color: $White;
+                font-weight: 700;
+                letter-spacing: .05rem;
+
+                &:active{
+                    box-shadow: 0px 24px 23px 0px rgba(255,91,102,0.38);
+                    border: rgb(255,91,102);
+                    background: linear-gradient(90deg, rgba(255,91,102,1) 0%, rgba(255,144,73,1) 100%);
+                }
+
+                &:hover{
+                    box-shadow: 0px 24px 23px 0px rgba(255,91,102,0.38);
+                    border: rgb(255,91,102);
+                    background: linear-gradient(90deg, rgba(255,91,102,1) 0%, rgba(255,144,73,1) 100%);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        
+
+
+    }
+    .card-image{
+        grid-area: 1 / 2 / 2 / 3;
+        display: grid;
+        padding: 25px 25px 25px 0;
+        place-items: center;
+        overflow: auto;
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: fill;
+        }
+        
+    }
+
+    &.success-card{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        height: 520px;
+        width: 505px;
+        padding: 60px;
+
+    
+        background-color: $White;
+        color: $Dark-Slate-Grey;
+        border-radius: 35px;
+
+        img{
+            height: 60px;
+            align-self: flex-start;
+        }
+
+        h1{
+            line-height: 1;
+            font-size: 3.5rem;
+        }
+
+        p{
+            font-size: 1.05rem;
+            font-weight: 400;
+        }
+
+        span{
+            font-weight: 700;
+        }
+
+        button{
+            height: 50px;
+            border-radius: 8px;
+            border: 1.5px solid $Dark-Slate-Grey;
+            background-color: $Dark-Slate-Grey;
+            color: $White;
+            font-weight: 700;
+            letter-spacing: .05rem;
+
+            
+            &:active{
+                box-shadow: 0px 10px 23px 0px rgba(255,91,102,0.38);
+                border: rgb(255,91,102);
+                background: linear-gradient(90deg, rgba(255,91,102,1) 0%, rgba(255,144,73,1) 100%);
+            }
+
+            &:hover{
+                box-shadow: 0px 10px 23px 0px rgba(255,91,102,0.38);
+                border: rgb(255,91,102);
+                background: linear-gradient(90deg, rgba(255,91,102,1) 0%, rgba(255,144,73,1) 100%);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    main{
+        max-width: 1024px;
+        margin: 1rem;
+    
+        &.success-card-container{
+
+            max-width: 1024px;
+            margin: 1rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main{
+        max-width: 768px;
+        height: 100vh;
+        margin: 0;
+    
+        &.success-card-container{
+            max-width: 1024px;
+            margin: 1rem;
+        }
+    }
+
+    article{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        border-radius: 0;
+
+
+        .card-form{
+            order: 2;
+            margin: 0;
+
+            h1{
+                font-size: 2.5rem;
+                margin-bottom: .5rem;
+                margin-top: 1.5rem;
+            }
+    
+            p{
+                font-weight: 400;
+                margin-bottom: 1.5rem;
+                margin-right: 1.75rem;
+            }
+    
+            ul{
+                li{
+                    margin-right: 2.125rem;
+                }
+            }
+            form{
+                label{
+                    margin-top: 1.25rem;
+                    font-size: .725rem;
+                    font-weight: 700;
+                        
+                    &.invalid-label{
+                        transform: translate(255px, 1px);
+    
+                    }
+                }
+    
+                input[type="email"]{
+                    height: 50px;
+                    border-radius: 8px;
+                    border: 1px solid $Grey;
+                    opacity: .75;
+                    margin: .25rem 1rem .25rem 0;
+                    text-indent: 1rem;
+                    color: $Dark-Slate-Grey;
+                    font-weight: 400;
+                }
+    
+                button{
+                    margin: 1rem 1rem 2rem 0rem;
+                }
+            }
+        }
+
+        .card-image{
+            height: 275px;
+            order: 1;
+            padding: 0;
+            overflow: hidden;
+            
+            img {
+                height: 100%;
+                object-fit: fill;
+                transform: translate(0, -55%);
+                
+            }
+        }
+
+        &.success-card{
+
+            img{
+                height: 60px;
+                align-self: flex-end;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    main{
+        max-width: 425px;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+    
+        &.success-card-container{
+            max-width: 425px;
+            margin: 1rem;
+            border-radius: 0;
+            
+        }
+    }
+
+    article{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        border-radius: 0;
+
+
+        .card-form{
+            order: 2;
+            margin: 0;
+            padding: 0 1.5rem;
+
+            h1{
+                font-size: 2.5rem;
+                margin-bottom: .5rem;
+                margin-top: 1.5rem;
+            }
+    
+            p{
+                font-weight: 400;
+                margin-bottom: 1.5rem;
+                margin-right: 1.75rem;
+            }
+    
+            ul{
+                li{
+                    margin-right: 2.125rem;
+                }
+            }
+            form{
+                label{
+                    margin-top: 1.25rem;
+                    font-size: .725rem;
+                    font-weight: 700;
+                        
+                    &.invalid-label{
+                        transform: translate(255px, 1px);
+    
+                    }
+                }
+    
+                input[type="email"]{
+                    height: 50px;
+                    border-radius: 8px;
+                    border: 1px solid $Grey;
+                    opacity: .75;
+                    margin: .25rem 1rem .25rem 0;
+                    text-indent: 1rem;
+                    color: $Dark-Slate-Grey;
+                    font-weight: 400;
+                }
+    
+                button{
+                    margin: 1rem 1rem 2rem 0rem;
+                }
+            }
+        }
+
+        .card-image{
+            height: 275px;
+            width: 100%;
+            order: 1;
+            padding: 0;
+            
+            img {
+                height: 100%;
+                width: 382px;
+
+                object-fit: cover;
+                transform: translate(0%, -5%);
+                
+            }
+        }
+
+        &.success-card{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            height: 100%;
+            width: 100%;
+            padding: 2.5rem;
+    
+        
+            background-color: $White;
+            color: $Dark-Slate-Grey;
+    
+            img{
+                height: 60px;
+                margin-top: 8rem;
+                align-self: flex-end;
+            }
+    
+            h1{
+                line-height: 1;
+                font-size: 3rem;
+            }
+    
+            p{
+                font-size: 1rem;
+                margin-right: auto;
+                font-weight: 400;
+            }
+    
+            span{
+                font-weight: 700;
+            }
+    
+            button{
+                height: 50px;
+                border-radius: 8px;
+                width: 100%;
+                border: 1.5px solid $Dark-Slate-Grey;
+                background-color: $Dark-Slate-Grey;
+                color: $White;
+                font-weight: 700;
+                letter-spacing: .05rem;
+                margin-top: auto;
+
+    
+                
+                &:active{
+                    box-shadow: 0px 10px 23px 0px rgba(255,91,102,0.38);
+                    border: rgb(255,91,102);
+                    background: linear-gradient(90deg, rgba(255,91,102,1) 0%, rgba(255,144,73,1) 100%);
+                }
+    
+                &:hover{
+                    box-shadow: 0px 10px 23px 0px rgba(255,91,102,0.38);
+                    border: rgb(255,91,102);
+                    background: linear-gradient(90deg, rgba(255,91,102,1) 0%, rgba(255,144,73,1) 100%);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 375px) {
+    main{
+        max-width: 375px;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+    
+        &.success-card-container{
+            max-width: 1024px;
+            margin: 1rem;
+        }
+    }
+
+    article{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        border-radius: 0;
+
+
+        .card-form{
+            order: 2;
+            margin: 0;
+            padding: 0 1.5rem;
+
+            h1{
+                font-size: 2.5rem;
+                margin-bottom: .5rem;
+                margin-top: 1.5rem;
+            }
+    
+            p{
+                font-weight: 400;
+                margin-bottom: 1.5rem;
+                margin-right: 1.75rem;
+            }
+    
+            ul{
+                li{
+                    margin-right: 2.125rem;
+                }
+            }
+            form{
+                label{
+                    margin-top: 1.25rem;
+                    font-size: .725rem;
+                    font-weight: 700;
+                        
+                    &.invalid-label{
+                        transform: translate(255px, 1px);
+    
+                    }
+                }
+    
+                input[type="email"]{
+                    height: 50px;
+                    border-radius: 8px;
+                    border: 1px solid $Grey;
+                    opacity: .75;
+                    margin: .25rem 1rem .25rem 0;
+                    text-indent: 1rem;
+                    color: $Dark-Slate-Grey;
+                    font-weight: 400;
+                }
+    
+                button{
+                    margin: 1rem 1rem 2rem 0rem;
+                }
+            }
+        }
+
+        .card-image{
+            height: 275px;
+            width: 100%;
+            order: 1;
+            padding: 0;
+            
+            img {
+                height: 100%;
+                width: 100%;
+
+                object-fit: fill;
+                transform: translate(-1%, -5%);
+                
+            }
+        }
+    }
+
+
+}

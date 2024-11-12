@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/css/main.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Subscription Successful!</title>
+</head>
+<body onload="successCard()">
+    <main>
+        <article class="success-card">
+            <img src="./assets/images/icon-success.svg" alt="success-icon">
+            <h1>
+                Thanks for subscribing!
+            </h1>
+            <p>
+                A confirmation email has been sent to <span class="user-email"></span>. 
+                Please open it and click the button inside to confirm your subscription.
+            </p>
+            <button onclick="returnHome()">Dismiss message</button>
+        </article>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

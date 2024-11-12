@@ -1,0 +1,484 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  background-color: hsl(235, 18%, 26%);
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 1rem;
+}
+main.success-card-container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 1rem;
+}
+
+article {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 35px;
+}
+article .card-form {
+  grid-area: 1/1/2/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: hsl(234, 29%, 20%);
+  margin: 60px;
+  width: 382px;
+}
+article .card-form h1 {
+  font-size: 3.475rem;
+  margin-bottom: 1rem;
+}
+article .card-form p {
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+article .card-form ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+article .card-form ul li:before {
+  content: "";
+  position: absolute;
+  margin-left: -30px;
+  width: 2em;
+  height: 2em;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg transform="scale(1) translate(0, 0)" transform-origin="center" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="%23FF6155"/><path stroke="%23FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>');
+}
+article .card-form form {
+  display: flex;
+  flex-direction: column;
+}
+article .card-form form label {
+  margin-top: 1.25rem;
+  font-size: 0.725rem;
+  font-weight: 700;
+}
+article .card-form form label.invalid-label {
+  display: none;
+  color: hsl(4, 100%, 67%);
+  position: absolute;
+  transform: translate(275px, 1px);
+}
+article .card-form form input[type=email] {
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid hsl(231, 7%, 60%);
+  opacity: 0.75;
+  margin: 0.25rem 0;
+  text-indent: 1rem;
+  color: hsl(234, 29%, 20%);
+  font-weight: 400;
+}
+article .card-form form input[type=email]::-moz-placeholder {
+  text-indent: 1rem;
+}
+article .card-form form input[type=email]::placeholder {
+  text-indent: 1rem;
+}
+article .card-form form input[type=email].invalid-email {
+  border-color: hsl(4, 100%, 67%);
+  color: hsl(4, 100%, 67%);
+  background-color: #ffe6e6;
+}
+article .card-form form input[type=email]:hover {
+  cursor: pointer;
+}
+article .card-form form button {
+  height: 50px;
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: 1.5px solid hsl(234, 29%, 20%);
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+article .card-form form button:active {
+  box-shadow: 0px 24px 23px 0px rgba(255, 91, 102, 0.38);
+  border: rgb(255, 91, 102);
+  background: linear-gradient(90deg, rgb(255, 91, 102) 0%, rgb(255, 144, 73) 100%);
+}
+article .card-form form button:hover {
+  box-shadow: 0px 24px 23px 0px rgba(255, 91, 102, 0.38);
+  border: rgb(255, 91, 102);
+  background: linear-gradient(90deg, rgb(255, 91, 102) 0%, rgb(255, 144, 73) 100%);
+  cursor: pointer;
+}
+article .card-image {
+  grid-area: 1/2/2/3;
+  display: grid;
+  padding: 25px 25px 25px 0;
+  place-items: center;
+  overflow: auto;
+}
+article .card-image img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+article.success-card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 520px;
+  width: 505px;
+  padding: 60px;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(234, 29%, 20%);
+  border-radius: 35px;
+}
+article.success-card img {
+  height: 60px;
+  align-self: flex-start;
+}
+article.success-card h1 {
+  line-height: 1;
+  font-size: 3.5rem;
+}
+article.success-card p {
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+article.success-card span {
+  font-weight: 700;
+}
+article.success-card button {
+  height: 50px;
+  border-radius: 8px;
+  border: 1.5px solid hsl(234, 29%, 20%);
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+article.success-card button:active {
+  box-shadow: 0px 10px 23px 0px rgba(255, 91, 102, 0.38);
+  border: rgb(255, 91, 102);
+  background: linear-gradient(90deg, rgb(255, 91, 102) 0%, rgb(255, 144, 73) 100%);
+}
+article.success-card button:hover {
+  box-shadow: 0px 10px 23px 0px rgba(255, 91, 102, 0.38);
+  border: rgb(255, 91, 102);
+  background: linear-gradient(90deg, rgb(255, 91, 102) 0%, rgb(255, 144, 73) 100%);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  main {
+    max-width: 1024px;
+    margin: 1rem;
+  }
+  main.success-card-container {
+    max-width: 1024px;
+    margin: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    max-width: 768px;
+    height: 100vh;
+    margin: 0;
+  }
+  main.success-card-container {
+    max-width: 1024px;
+    margin: 1rem;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    border-radius: 0;
+  }
+  article .card-form {
+    order: 2;
+    margin: 0;
+  }
+  article .card-form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  article .card-form p {
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    margin-right: 1.75rem;
+  }
+  article .card-form ul li {
+    margin-right: 2.125rem;
+  }
+  article .card-form form label {
+    margin-top: 1.25rem;
+    font-size: 0.725rem;
+    font-weight: 700;
+  }
+  article .card-form form label.invalid-label {
+    transform: translate(255px, 1px);
+  }
+  article .card-form form input[type=email] {
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid hsl(231, 7%, 60%);
+    opacity: 0.75;
+    margin: 0.25rem 1rem 0.25rem 0;
+    text-indent: 1rem;
+    color: hsl(234, 29%, 20%);
+    font-weight: 400;
+  }
+  article .card-form form button {
+    margin: 1rem 1rem 2rem 0rem;
+  }
+  article .card-image {
+    height: 275px;
+    order: 1;
+    padding: 0;
+    overflow: hidden;
+  }
+  article .card-image img {
+    height: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+    transform: translate(0, -55%);
+  }
+  article.success-card img {
+    height: 60px;
+    align-self: flex-end;
+  }
+}
+@media (max-width: 425px) {
+  main {
+    max-width: 425px;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  main.success-card-container {
+    max-width: 425px;
+    margin: 1rem;
+    border-radius: 0;
+  }
+  article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    border-radius: 0;
+  }
+  article .card-form {
+    order: 2;
+    margin: 0;
+    padding: 0 1.5rem;
+  }
+  article .card-form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  article .card-form p {
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    margin-right: 1.75rem;
+  }
+  article .card-form ul li {
+    margin-right: 2.125rem;
+  }
+  article .card-form form label {
+    margin-top: 1.25rem;
+    font-size: 0.725rem;
+    font-weight: 700;
+  }
+  article .card-form form label.invalid-label {
+    transform: translate(255px, 1px);
+  }
+  article .card-form form input[type=email] {
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid hsl(231, 7%, 60%);
+    opacity: 0.75;
+    margin: 0.25rem 1rem 0.25rem 0;
+    text-indent: 1rem;
+    color: hsl(234, 29%, 20%);
+    font-weight: 400;
+  }
+  article .card-form form button {
+    margin: 1rem 1rem 2rem 0rem;
+  }
+  article .card-image {
+    height: 275px;
+    width: 100%;
+    order: 1;
+    padding: 0;
+  }
+  article .card-image img {
+    height: 100%;
+    width: 382px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transform: translate(0%, -5%);
+  }
+  article.success-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+    width: 100%;
+    padding: 2.5rem;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(234, 29%, 20%);
+  }
+  article.success-card img {
+    height: 60px;
+    margin-top: 8rem;
+    align-self: flex-end;
+  }
+  article.success-card h1 {
+    line-height: 1;
+    font-size: 3rem;
+  }
+  article.success-card p {
+    font-size: 1rem;
+    margin-right: auto;
+    font-weight: 400;
+  }
+  article.success-card span {
+    font-weight: 700;
+  }
+  article.success-card button {
+    height: 50px;
+    border-radius: 8px;
+    width: 100%;
+    border: 1.5px solid hsl(234, 29%, 20%);
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    margin-top: auto;
+  }
+  article.success-card button:active {
+    box-shadow: 0px 10px 23px 0px rgba(255, 91, 102, 0.38);
+    border: rgb(255, 91, 102);
+    background: linear-gradient(90deg, rgb(255, 91, 102) 0%, rgb(255, 144, 73) 100%);
+  }
+  article.success-card button:hover {
+    box-shadow: 0px 10px 23px 0px rgba(255, 91, 102, 0.38);
+    border: rgb(255, 91, 102);
+    background: linear-gradient(90deg, rgb(255, 91, 102) 0%, rgb(255, 144, 73) 100%);
+    cursor: pointer;
+  }
+}
+@media (max-width: 375px) {
+  main {
+    max-width: 375px;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  main.success-card-container {
+    max-width: 1024px;
+    margin: 1rem;
+  }
+  article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    border-radius: 0;
+  }
+  article .card-form {
+    order: 2;
+    margin: 0;
+    padding: 0 1.5rem;
+  }
+  article .card-form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  article .card-form p {
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    margin-right: 1.75rem;
+  }
+  article .card-form ul li {
+    margin-right: 2.125rem;
+  }
+  article .card-form form label {
+    margin-top: 1.25rem;
+    font-size: 0.725rem;
+    font-weight: 700;
+  }
+  article .card-form form label.invalid-label {
+    transform: translate(255px, 1px);
+  }
+  article .card-form form input[type=email] {
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid hsl(231, 7%, 60%);
+    opacity: 0.75;
+    margin: 0.25rem 1rem 0.25rem 0;
+    text-indent: 1rem;
+    color: hsl(234, 29%, 20%);
+    font-weight: 400;
+  }
+  article .card-form form button {
+    margin: 1rem 1rem 2rem 0rem;
+  }
+  article .card-image {
+    height: 275px;
+    width: 100%;
+    order: 1;
+    padding: 0;
+  }
+  article .card-image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+    transform: translate(-1%, -5%);
+  }
+}/*# sourceMappingURL=main.css.map */
